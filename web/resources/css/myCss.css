@@ -1,14 +1,74 @@
 
 #navbar{
-  background-color: #2047a8;
+  background-color: #17AB5A;
+  box-shadow: 2px 1px 5px #17AB5A;
   color: white;
+  padding: 10px;
 }
 #navbar span.navbar-element {
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-top: 10px;
+  padding: 10px;
+}
+#navbar span.navbar-element:hover {
+  animation:navbar 2s;
+  -webkit-animation:navbar 2s; /* Safari and Chrome */
+  background-color: #47DE2D;
 }
 #navbar span a{
-  color: #a8abec;
+  color: white;
+}
+#navbar span a:hover{
+  text-decoration: none;
+}
+@-webkit-keyframes navbar{
+  from {background: #17AB5A;}
+  to {background: #47DE2D;}
+}
+@keyframes navbar{
+  from {background: #17AB5A;}
+  to {background: #47DE2D;}
 }
 
+/* Formularios */
+.formAi input[type="text"]{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px;
+  width: 70%;
+}
+.formAi input[type="text"]:focus{
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px rgba(23, 171, 90, 0.6);
+  border-color: rgba(23, 171, 90, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(23, 171, 90, 0.6);
+  outline: none;
+}
+.formAi label{
+  font-weight: bold;
+  padding-left: 10px;
+  padding-top: 5px;
+  width: 20%;
+}
+
+/* Estilos generales */
+.pointer{
+  cursor: pointer!important;
+}
+.width20{
+  float: left;
+  width: 20% !important;
+}
+.width30{
+  float: left;
+  width: 30% !important;
+}
+.width50{
+  float: left;
+  width: 50% !important;
+}
+.width80{
+  float: left;
+  width: 80% !important;
+}
+.width100{
+  float: left;
+  width: 100% !important;
+}

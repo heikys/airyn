@@ -2,26 +2,53 @@
   <head>
     <!-- javascript -->
     <script src="../resources/js/jquery-2.1.0.js"> </script>
+    <script src="../resources/js/bootstrap.js"> </script>
     
     <!-- css -->
     <link rel="stylesheet" href="../resources/css/myCss.css"/>
     <link rel="stylesheet" href="../resources/css/bootstrap.css"/>
     <title> airyn </title>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(document).on('click', '#spanBusquedaAvanzada', function(){
+          console.log('bu');
+          $('#spanBusquedaAvanzada').toggleClass('glyphicon-chevron-down');
+          $('#spanBusquedaAvanzada').toggleClass('glyphicon-chevron-up');
+          $('#divBusquedaAvanzada').toggleClass('hidden');
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="row" id="navbar">
-      <span class="navbar-element col-sm-2"><a href="#">Icono-Nombre</a></span>
-      <span class="navbar-element col-sm-2">
+      <span class="navbar-element"><a href="#">Icono-Nombre</a></span>
+      <span class="navbar-element dropdown">
         <a href="#">
           Buscar
           <span class="glyphicon glyphicon-search"></span>
         </a>
-        <span class="glyphicon glyphicon-chevron-down"></span>
+        <span id="spanBusquedaAvanzada" class="glyphicon glyphicon-chevron-down pointer" title="Búsqueda avanzada"></span>
       </span>
-      <span class="navbar-element col-sm-2"><a href="#">Biblioteca</a></span>
-      <span class="navbar-element col-sm-2"><a href="#">Amigos</a></span>
-      <span class="navbar-element col-sm-2"><a href="#">Círculos</a></span>
-      <span class="navbar-element col-sm-2"><a href="#">Perfil</a></span>
+      <span class="navbar-element"><a href="#">Biblioteca</a></span>
+      <span class="navbar-element"><a href="#">Amigos</a></span>
+      <span class="navbar-element"><a href="#">Círculos</a></span>
+      <span class="navbar-element"><a href="#">Perfil</a></span>
+    </div>
+    
+    <div id="divBusquedaAvanzada" class="hidden">
+      <h4>Búsqueda avanzada</h4>
+      <form id="formBusquedaAvanzada" class="formAi formAi-2col">
+        <div class="width100">
+          <div class="width50">
+            <label>Título:</label>
+            <input type="text" placeholder="Título">
+          </div>
+          <div class="width50">
+            <label>Autor:</label>
+            <input type="text" placeholder="Autor">
+          </div>
+        </div>
+      </form>
     </div>
   </body>
 </html>
