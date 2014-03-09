@@ -1,0 +1,14 @@
+
+#navbar{
+  background-color: #2047a8;
+  color: white;
+}
+#navbar span.navbar-element {
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+#navbar span a{
+  color: #a8abec;
+}
+
